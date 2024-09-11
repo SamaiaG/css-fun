@@ -10,6 +10,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    background-color: #EFB6C1 ;
 }
 
 .plate {
@@ -107,3 +108,52 @@ body {
     border-radius: 40%;
     position: relative;
 }
+.candles{
+    position: relative;
+    top: -11vmin
+}
+.candle{
+    width: 3vmin;
+    height: 10vmin;
+    background: rgb(207, 200, 97);
+    border-radius: 10%;
+    position: absolute;
+    z-index: 6;
+    top: 25vmin;
+    left: -20vmin
+}
+.c2{
+    top: 27vmin;
+    left: -6vmin;
+}
+.c3{
+    top: 24vmin;
+    left: 15vmin;
+}
+.candle::before{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 2.8vmin;
+        height: 3.2vmin;
+        top: -3.5vmin;
+        background: yellow;
+        clip-path: polygon(50% 0%, 60% 30%, 97% 40%, 66% 55%, 50% 100%, 38% 60%, 6% 35%, 39% 28%);
+        z-index: 5;
+        animation: star 1s infinite;
+      }
+
+      @keyframes star{
+        0%{
+          width: 2.8vmin;
+          height: 3.2vmin;
+        }
+        50%{
+          width: 3.2vmin;
+          height: 3.6vmin;
+        }
+        100%{
+          width: 2.8vmin;
+          height: 3.2vmin;
+        }
+      }
