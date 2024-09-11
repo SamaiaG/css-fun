@@ -17,7 +17,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFD0F2 ;
 }
 
 .canvas, .girl, .hair{
