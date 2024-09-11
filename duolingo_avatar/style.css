@@ -1,0 +1,319 @@
+:root {
+  --hair: #553629;
+  --skin: #FFC6B7;
+  --white: #fff;
+  --upper-body: #44A1CD;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFD0F2 ;
+}
+
+.canvas, .girl, .hair{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hair, .b2 {
+  position: relative;
+}
+.girl, .b1, .b3, .face, .hair-front, 
+.eye, .iris, .blitz, .pupil, .hand, 
+.part, .cheek, .nose, .mouth {
+  position: absolute;
+}
+.b1, .b2, .b3, .face::before, 
+.face::after, .eye, .iris, .iris::before, 
+.pupil, .pupil::before{
+  border-radius: 50%;
+}
+.b1, .b2, .b3, .front {
+  background-color: var(--hair);
+}
+.face::before, .face::after,.iris::before, .pupil::before, 
+.body::before, .body::after, .hand::before, .hand::after, 
+.b-down::before, .b-down::after, .nose::before{
+  content: "";
+  display: block;
+  position: absolute;
+}
+.b1{
+  width: 46vmin;
+  height: 30vmin;
+
+}
+.b2{
+  width: 42vmin;
+  height: 27vmin;
+  top: -15vmin;
+}
+
+.b3{
+  width: 22vmin;
+  height: 24vmin;
+  top: -22vmin;
+  left: 5vmin
+} 
+.h2{
+  transform: scale(-1, 1);
+  left: 15vmin;
+}
+.face{
+  width: 25vmin;
+  height: 19vmin;
+  border-radius: 25%;
+  background: var(--skin);
+  top: -14vmin
+}
+.hair-front {
+  display: flex;
+  gap: 20%;
+  z-index: 2;
+  top: -19vmin;
+}
+.front {
+  width: 14vmin;
+  height: 15vmin;
+  border-radius: 130% 0 130% 0;
+  transform: rotate(10deg);
+}
+ .f2 {
+  transform: scaleX(-1) rotate(10deg);
+} 
+
+.face::before, .face::after{
+  background: var(--skin);
+  z-index: 1;
+  top: -2vmin;
+  width: 6vmin;
+  height: 8vmin;
+}
+
+.face::before{
+  left: 7vmin;
+}
+.face::after{
+  left: 12vmin;
+}
+.eye{
+  width: 10vmin;
+  height: 9.8vmin;
+  background: var(--white);
+  top: 1.5vmin;
+  left: 3vmin;
+  z-index: 2;
+}
+.e2{
+  left: 12vmin
+}
+.iris{
+  width: 7vmin;
+  height: 6.8vmin;
+  top: 1.5vmin;
+  left: 1.5vmin;
+  background: #3D3D3D;
+  z-index: 3;
+}
+.iris::before{
+  width: 2.3vmin;
+  height: 1.3vmin;
+  background: var(--white);
+  top: 1vmin;
+  left: 1vmin;
+  z-index: 5;
+  transform: rotate(-45deg);
+}
+.pupil{
+  width: 5vmin;
+  height: 3.7vmin;
+  background: #33505D;
+  top: 3vmin;
+  left: 1.4vmin;
+  z-index: 4;
+}
+.pupil::before{
+  width: 1.5vmin;
+  height: 0.9vmin;
+  background: var(--white);
+  top: 1.5vmin;
+  left: 1vmin;
+  z-index: 5;
+  transform: rotate(-45deg);
+}
+.blitz{
+  width: 2.8vmin;
+  height: 3.2vmin;
+  background: var(--white);
+  clip-path: polygon(50% 0%, 60% 30%, 97% 40%, 66% 55%, 50% 100%, 38% 60%, 6% 35%, 39% 28%);
+  top: 1.5vmin;
+  left: 3vmin;
+  z-index: 5;
+  animation: star 3s infinite;
+}
+.i2, .bl2, .p2{
+  transform: scale(-1, 1);
+}
+.p2{
+  top: 4.5vmin;
+  left: 2.2vmin
+}
+.bl2{
+  top: 3vmin;
+  left: 2.2vmin
+}
+.body{
+  position: relative;
+  top: -1vmin
+}
+
+.body::before{
+  width: 19vmin;
+  height: 15vmin;
+  background: var(--upper-body);
+  z-index: 3;
+  border-radius: 10% 10% 0 0;
+  top: -0.5vmin
+}
+.body::after{
+  width: 13vmin;
+  height: 1vmin;
+  background: var(--upper-body);
+  top: -1.5vmin;
+  left: 3vmin;
+}
+.b-down{
+  position: relative;
+  width: 19vmin;
+  height: 12vmin;
+  background: #1680B2;
+  z-index: 3;
+  top: 14.5vmin;
+}
+
+.hand{
+  top: -1vmin
+}
+.hand::before{
+  width: 7vmin;
+  height: 25vmin;
+  background: var(--upper-body);
+  z-index: 3;
+  left: 18.5vmin;
+  border-radius: 0 80% 0 0;
+  transform: rotate(-10deg);
+}
+.hand::after{
+  width: 7vmin;
+  height: 3vmin;
+  background: var(--skin); ;
+  top: 24vmin;
+  left: 20.8vmin;
+  transform: rotate(-10deg);
+
+} 
+.arm2{
+  transform: scaleX(-1);
+  left: 19vmin;
+}
+.part{
+  width: 1vmin;
+  height: 2.5vmin;
+  background: #136D97;
+  top: 0;
+  left: 4vmin;
+}
+
+.pr2{
+  left: 14.5vmin;
+}
+.b-down::before{
+  width: 1vmin;
+  height: 2.5vmin;
+  background: #136D97;
+  top: 9.5vmin;
+  left: 9vmin;
+}
+.b-down::after{
+  width: 2.5vmin;
+  height: 1vmin;
+  background: #136D97;
+  border-radius: 30%;
+  top: 9.5vmin;
+  left: 8.3vmin;
+}
+
+.cheek{
+  width: 10vmin;
+  height: 3vmin;
+  background: #FFC6B7;
+  border-radius: 50% 50% 0 0;
+  top: 9.5vmin;
+  left: 3vmin;
+  z-index: 2;
+}
+.c2{
+  left: 12vmin;
+}
+
+.nose{
+  width: 2.5vmin;
+  height: 2.5vmin;
+  background: #EE9583;
+  top: 9vmin;
+  left: 11.5vmin;
+  z-index: 2;
+  border-radius: 50%;
+}
+  .nose::before{
+    width: 2.5vmin;
+    height: 2.5vmin;
+    background: #EE9583;
+    top: -1.4vmin;
+    z-index: 2;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+.mouth{
+  width: 4vmin;
+  height: 4.5vmin;
+  background: transparent;
+  border: 1vmin solid;
+  border-color: transparent #EE9583 #EE9583 #EE9583;
+  top: 11.5vmin;
+  left: 9.5vmin;
+  z-index: 2;
+  border-radius: 50%;
+  transform: rotate(23deg);
+}
+
+@keyframes star{
+  0%{
+    width: 2.8vmin;
+    height: 3.2vmin;
+  }
+  50%{
+    width: 3.2vmin;
+    height: 3.6vmin;
+  }
+  100%{
+    width: 2.8vmin;
+    height: 3.2vmin;
+  }
+}
