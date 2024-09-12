@@ -200,7 +200,7 @@ body {
 .body {
   width: 28vmin;
   height: 34vmin;
-  background: #b48a93;
+  background: rgb(235 152 78);
   border-radius: 50%;
   position: absolute;
   top: 85%;
@@ -374,7 +374,7 @@ body {
   width: 3.6vmin;
   height: 6.4vmin;
   border-radius: 50%;
-  background-color: #c5425f;
+  background-color: #df788f;
   position: absolute;
   z-index: 8;
   top: 0;
