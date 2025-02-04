@@ -1,13 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 
-.container {
-    width: 15vmin;
-    height: 15vmin;
-    border-radius: 30%;
-background: #add6f5;
-box-shadow:  41px 41px 82px #7996ac,
-             -41px -41px 82px #e1ffff;
+body {
+    margin: 0;
+    padding: 0 160px; 
+    border: 0;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4vmin 0;
 }
 
+.hero-section{
+    height: 100vh;
+}
+
+.page-canvas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
 iframe{
-border: none}
+border: none;
+}
+
+.motto{
+    z-index: -88;
+    font-size: 12vmin;
+    font-family: 'Alfa Slab One';
+    font-weight: 400;
+    letter-spacing: 1vmin;
+    position: relative;
+    top: 20vmin;
+    color: #5893D4;
+    width: 100%;
+    text-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
+    align-self: end;
+}
+hr{
+    width: 100%;
+    height: 0.4px;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 80%;
+    border: none;
+    z-index: -96;
+}
+
+.window{
+    display: flex;
+    align-items: end;
+    width: 20vmin;
+    height: 30vmin;
+    background: #CCDAEA;
+    border:#C6B09C 0.5vmin solid;
+    opacity: 0.8;
+    z-index: 1;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.window::before, .image-nail::before, .image-nail::after{
+    box-sizing: border-box;
+    display: block;
+    content: "";
+}
+.window::before{
+    width: 26.2vmin;
+    height: 4vmin;
+    position: absolute;
+    background: #C6B09C;
+    top: 30vmin;
+    left: -3vmin;
+    clip-path: polygon(12% 0%, 88% 0%, 100% 100%, 0% 100%);
+}
+
+.win-right, .win-left{
+    width: 10vmin;
+    height: 15vmin;
+    border:#C6B09C 0.5vmin solid;
+}
+.cat{
+    width: 15vmin;
+    height: 15vmin;
+    position: relative;
+    left: -5vmin;
+    z-index: -2;
+}
+
+.flower{
+    width: 15vmin;
+    height: 15vmin;
+    z-index: 99;
+    position: absolute;
+    top: 21vmin;
+    left: -4vmin;
+}
+.girl{
+    width: 50vmin;
+    height: 70vmin;
+    position: relative;
+    top: 3vmin;
+}
+
+.win-container, .girl-container, .image-container, .title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.win-container{
+    padding-top: 10vmin;
+    justify-content: start;
+}
+.elephant-image{
+    position: relative;
+    top: 13vmin;
+    left: -15vmin;
+    z-index: 33;
+}
+.duolingo-image{
+    position: relative;
+    top: 20vmin;
+    left: -15vmin;
+}
+.image{
+    width: 21vmin;
+    height: 12vmin;
+    border: 0.5vmin solid #C6B09C;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.i-duolingo{
+    background-color: white;
+}
+.image-nail{
+    width: 1vmin;
+    height: 1vmin;
+    border-radius: 50%;
+    position: relative;
+    background: black;
+    top: -1.7vmin;
+}
+
+.image-nail::before, .image-nail::after{
+    width: 6vmin;
+    height: 0.3vmin;
+    position: absolute;
+    background: black;
+}
+.image-nail::before{
+    top: 1.4vmin;
+    transform: rotate(24deg);
+}
+.image-nail::after{
+    top: 1.4vmin;
+    left: -5vmin;
+    transform: rotate(-24deg);
+}
+
+.the-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10vmin;
+}
+
+
+.image-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10vmin;
+}
+
+.is2, .is4{
+    flex-direction: row-reverse;
+}
+.category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 30vmin;
+}
+
+.c2, .c4{
+    align-items: start;
+}
+.c2 .description, .c4 .description{
+    text-align: left;
+}
+.title{
+    font-size: 6vmin;
+    font-weight: bold;
+}
+.description{
+    font-size: 3vmin;
+    text-align: right;
+}
+.images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5vmin;
+}
+.css-image{
+    width: 30vmin;
+    height: 20vmin;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.footer{
+    width: 100vw;
+    height: 10vmin;
+    background-color: #5893D4;
+    margin-top: 10vmin;
+}

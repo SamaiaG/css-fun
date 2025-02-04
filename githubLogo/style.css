@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.github-logo {
+  width: 80vmin;
+  height: 80vmin;
+  background: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas{
+  position: relative;
+  top: 23vmin;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head{
+  width: 56vmin;
+  height: 43vmin;
+  background: white;
+  border-radius: 50%;
+}
+
+.head::before, .head::after{
+  content: '';
+  display: block;
+  position: absolute;
+  background: white;
+  width: 18vmin;
+  height: 18vmin;
+  border-radius: 0% 100% 50% ;
+ }
+ .head::before{
+   top: -2vmin;
+   left: 2vmin;
+   transform: rotate(20deg);
+ }
+ .head::after{
+   top: -2vmin;
+   right: 2vmin;
+   transform: rotate(70deg);
+ }
+.body{
+  position: relative;
+  top: -5vmin;
+  width: 18vmin;
+  height: 23vmin;
+  background-color: white;
+  border-radius: 8vmin 8vmin 4vmin 4vmin;
+  position: relative;
+  z-index: 1
+}
+
+.legs{
+  position: relative;
+  top: -11vmin;
+  width: 30vmin;
+  height: 7vmin;
+  background-color: white;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  border-radius: 100%;
+}
+
+.tail{
+  position: relative;
+  top: -28vmin;
+  left: -11vmin;
+  width: 19vmin;
+  height: 8vmin;
+  background-color: white;
+  border-radius: 50%;
+  transform: rotate(20deg);
+
+}
+.tail::before{
+  content: '';
+  display: block;
+  position: absolute;
+  background: black;
+  width: 13vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  top: -1vmin;
+  left: 0vmin;
+}
+.tail-tip{
+  position: relative;
+  top: -39vmin;
+  left: -22vmin;
+  width: 12vmin;
+  height: 4vmin;
+  background-color: white;
+  border-radius: 50%;
+  transform: rotate(46deg);
+}
+.tail-tip::before{
+  content: '';
+  display: block;
+  position: absolute;
+  background: black;
+  width: 16vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  top: 2.6vmin;
+  left: 0vmin;
+  transform: rotate(8deg);
+}

@@ -14,7 +14,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: white;
+    background: #CCDAEA;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -150,7 +150,7 @@ body {
   .nose::before, .nose::after{
     width: 10vmin;
     height: 15vmin;
-    background: white;
+    background: #CCDAEA;
     border-radius: 50%;
     left: 4vmin;
   }
