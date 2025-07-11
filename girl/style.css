@@ -31,6 +31,10 @@ body {
   z-index: -4;
   position: relative;
 }
+
+
+
+
 .girl {
   display: flex;
   flex-direction: column;
@@ -40,6 +44,7 @@ body {
 .head {
   position: relative;
 }
+
 
 .face {
   width: 28vmin;
@@ -430,6 +435,53 @@ body {
   }
 }
 
+.bubble{
+  width: 30vmin;
+  height: 15vmin;
+  background-color: #edd7bc;
+  border-radius: 50%;
+  position:  absolute;
+  left:16%;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 2;
+  padding: 3vmin;
+  transition: opacity 0.5s ease-in-out;
+}
+.bubble::before {
+  content: '';
+  display: block;
+  width: 20vmin;
+  height: 10vmin;
+  background-color: #edd7bc;
+  position: absolute;
+  top: 4vmin;
+  left: 13vmin;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  z-index: -1;
+}
+
+.text1 {
+  font-size: 1.5vmin;
+  color: #393836;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+.text2 {
+  font-size: 1.4vmin;
+  color: #393836;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.girl:hover ~ .bubble {
+  opacity: 1;
+}
 .girl:hover .blush {
   animation: cheeks 3s infinite;
 }
@@ -439,3 +491,5 @@ body {
 .girl:hover .mouth {
   animation: smile 3s forwards;
 }
+
+
