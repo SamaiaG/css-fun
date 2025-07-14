@@ -452,18 +452,7 @@ body {
   padding: 3vmin;
   transition: opacity 0.5s ease-in-out;
 }
-.bubble::before {
-  content: '';
-  display: block;
-  width: 20vmin;
-  height: 10vmin;
-  background-color: #edd7bc;
-  position: absolute;
-  top: 12vmin;
-  left: 25vmin;
-  clip-path: polygon(0 0, 0 100%, 100% 100%);
-  z-index: -1;
-}
+
 
 .text1 {
   font-size: 2.5vmin;
