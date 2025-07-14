@@ -441,7 +441,7 @@ body {
   background-color: #edd7bc;
   border-radius: 50%;
   position:  absolute;
-  left:-5%;
+  left:15%;
   top: 20%;
   display: flex;
   flex-direction: column;
@@ -459,8 +459,8 @@ body {
   height: 10vmin;
   background-color: #edd7bc;
   position: absolute;
-  top: 8vmin;
-  left: 20vmin;
+  top: 12vmin;
+  left: 25vmin;
   clip-path: polygon(0 0, 0 100%, 100% 100%);
   z-index: -1;
 }
