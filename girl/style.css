@@ -438,7 +438,7 @@ body {
 .bubble{
   width: 40vmin;
   height: 25vmin;
-  background-color: #edd7bc;
+  background-color: #E9EDF3;
   border-radius: 50%;
   position:  absolute;
   left:0;
@@ -456,7 +456,7 @@ body {
 
 .text1 {
   font-size: 2.5vmin;
-  color: #393836;
+  color: #2B2B2B;
   font-weight: bold;
   text-align: center;
   line-height: 1.2;
@@ -465,7 +465,7 @@ body {
 }
 .text2 {
   font-size: 2.3vmin;
-  color: #393836;
+  color: #2B2B2B;
   text-align: center;
   line-height: 1.4;
   font-family: 'Nunito', sans-serif;
