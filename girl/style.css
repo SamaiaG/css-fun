@@ -34,8 +34,6 @@ body {
 }
 
 
-
-
 .girl {
   display: flex;
   flex-direction: column;
@@ -215,7 +213,7 @@ body {
 .table {
   width: 100vmin;
   height: 5vmin;
-  background-color: #fff;
+  background-color: #d9bfa6;
   position: relative;
   top: 12vmin;
 }
