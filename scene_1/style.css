@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvas {
+  position: relative;
+  width: 100vmin;
+  height: 100vmin;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+.background {
+  width: 90vmin;
+  height: 65vmin;
+  border-radius: 50%;
+  transform: rotate(-40deg);
+  position: absolute;
+  top: 10vmin;
+  left: 5vmin;
+  background: #ac67a7;
+  opacity: 0.5;
+  transition: background-color 1.2s ease;
+}
+
+/* ---------- GIRL ---------- */
+
+.girl {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+}
+
+.girl * {
+  transition: all 0.8s ease;
+}
+
+/* ---------- FACE ---------- */
+
+.face {
+  width: 28vmin;
+  height: 25vmin;
+  background: #fcead5;
+  border-radius: 50%;
+  padding-top: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyes,
+.eyebrows,
+.blushes {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.eye {
+  width: 5vmin;
+  height: 5.5vmin;
+  background: white;
+  border-radius: 50% 50% 10% 30%;
+}
+
+.iris {
+  width: 3vmin;
+  height: 3vmin;
+  background: #444;
+  border-radius: 50%;
+  position: relative;
+  top: 30%;
+  left: 20%;
+}
+
+.light {
+  width: 1vmin;
+  height: 1vmin;
+  background: white;
+  border-radius: 50%;
+}
+
+.e2 {
+  transform: scaleX(-1);
+}
+
+.eyebrow {
+  width: 7vmin;
+  height: 2vmin;
+  border-top: 0.6vmin solid #713d0e;
+  border-radius: 50%;
+}
+
+.blush {
+  width: 8vmin;
+  height: 2vmin;
+  background: #fbc0c0;
+  border-radius: 50%;
+  filter: blur(4px);
+}
+
+.nose {
+  width: 2.4vmin;
+  height: 2.4vmin;
+  border: 0.5vmin solid #caa482;
+  border-color: #caa482 #caa482 #caa482 transparent;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+}
+
+.mouth {
+  width: 9vmin;
+  height: 6vmin;
+  border-bottom: 0.5vmin solid #caa482;
+  border-radius: 50%;
+}
+
+/* ---------- HAIR ---------- */
+
+.hair {
+  position: absolute;
+  top: -6vmin;
+  left: -2vmin;
+}
+
+.hair-front {
+  display: flex;
+}
+
+.front {
+  width: 17vmin;
+  height: 17vmin;
+  background: #713d0e;
+  border-radius: 120% 0 120% 0;
+}
+
+.f2 {
+  transform: scaleX(-1);
+}
+
+.hair-back {
+  width: 31vmin;
+  height: 25vmin;
+  background: #713d0e;
+  border-radius: 50%;
+  position: absolute;
+  top: -18vmin;
+  z-index: -1;
+}
+
+/* ponytails */
+
+.ponytail {
+  position: absolute;
+  top: 18vmin;
+}
+
+.ponytail span {
+  display: block;
+  width: 7vmin;
+  height: 9vmin;
+  background: #713d0e;
+  border-radius: 50%;
+  margin-top: -2vmin;
+}
+
+.ponytail.right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+/* ---------- BODY ---------- */
+
+.neck {
+  width: 6vmin;
+  height: 8vmin;
+  background: #fcead5;
+  margin: auto;
+}
+
+.body {
+  width: 28vmin;
+  height: 22vmin;
+  background: #c08f8f;
+  border-radius: 50% 50% 0 0;
+}
+
+/* ---------- TABLE ---------- */
+
+.table {
+  position: absolute;
+  bottom: 10vmin;
+  width: 100%;
+  height: 5vmin;
+  background: #d9bfa6;
+}
+
+.on-table {
+  position: relative;
+  height: 100%;
+}
+
+/* ---------- OBJECTS ---------- */
+
+.bear {
+  width: 8vmin;
+  height: 8vmin;
+  background: #ad5a1d;
+  border-radius: 50%;
+  position: absolute;
+  left: 30%;
+  top: -8vmin;
+}
+
+.cup {
+  width: 6vmin;
+  height: 6vmin;
+  background: #a9c1e0;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  right: 30%;
+  top: -6vmin;
+}
+
+.diploma {
+  width: 8vmin;
+  height: 10vmin;
+  background: #1c3928;
+  position: absolute;
+  left: 30%;
+  top: -10vmin;
+  opacity: 0;
+}
+
+.diploma p {
+  color: white;
+  font-size: 1.4vmin;
+  text-align: center;
+  margin-top: 4vmin;
+}
+
+/* ---------- HAT ---------- */
+
+.hat {
+  width: 42vmin;
+  height: 12vmin;
+  background: #333;
+  clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+  position: absolute;
+  top: -14vmin;
+  opacity: 0;
+}
+
+.hat_base {
+  width: 15vmin;
+  height: 9vmin;
+  background: #333;
+  position: absolute;
+  top: -8vmin;
+  left: 6vmin;
+  opacity: 0;
+}
+
+/* ---------- STATES ---------- */
+
+.girl.is-graduating .ponytail {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.girl.is-graduating .hair-back {
+  width: 40vmin;
+  height: 50vmin;
+}
+
+.girl.is-graduating .body {
+  background: #434040;
+  height: 27vmin;
+}
+
+.girl.is-graduating .hat,
+.girl.is-graduating .hat_base {
+  opacity: 1;
+}
+
+.girl.is-graduating .bear {
+  opacity: 0;
+}
+
+.girl.is-graduating .diploma {
+  opacity: 1;
+}
+
+.girl.is-graduating ~ .background {
+  background: #4d7f4c;
+}

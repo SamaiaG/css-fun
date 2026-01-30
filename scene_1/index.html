@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Load both CSS files -->
+  <link rel="stylesheet" href="small_girl.css" />
+  <link rel="stylesheet" href="graduating_girl.css" />
+
+  <style>
+    /* Scene wrapper */
+    .scene {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Each illustration layer */
+    .layer {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+
+    /* Initial states */
+    .layer.small {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .layer.graduating {
+      opacity: 0;
+      transform: scale(1.02);
+      pointer-events: none;
+    }
+
+    /* Transition */
+    .scene.is-graduated .layer.small {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+
+    .scene.is-graduated .layer.graduating {
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="scene" id="scene">
+
+    <!-- ================= SMALL GIRL ================= -->
+    <div class="layer small">
+      <div class="canvas">
+        <div class="background"></div>
+
+        <div class="girl">
+          <div class="head">
+            <div class="face">
+              <div class="eyebrows">
+                <div class="eyebrow eb1"></div>
+                <div class="eyebrow eb2"></div>
+              </div>
+
+              <div class="eyes">
+                <div class="eye e1">
+                  <div class="iris"><div class="light l1"></div></div>
+                </div>
+                <div class="eye e2">
+                  <div class="iris"><div class="light l2"></div></div>
+                </div>
+              </div>
+
+              <div class="blushes">
+                <div class="blush b1"></div>
+                <div class="nose"></div>
+                <div class="blush b2"></div>
+              </div>
+
+              <div class="mouth"></div>
+            </div>
+          </div>
+
+          <div class="neck"></div>
+
+          <div class="hair">
+            <div class="hair-front">
+              <div class="front f1"></div>
+              <div class="front f2"></div>
+            </div>
+
+            <div class="hair-back">
+              <div class="ponytail left">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="ponytail right">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="body">
+            <div class="shirt">
+              <div class="shirt-neck"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table">
+          <div class="on-table">
+            <div class="bear">
+              <div class="bear-head">
+                <div class="bear-eye eye1"></div>
+                <div class="bear-eye eye2"></div>
+                <div class="bear-nose">
+                  <div class="bear-mouth"></div>
+                </div>
+              </div>
+              <div class="bear-ear ear1"></div>
+              <div class="bear-ear ear2"></div>
+              <div class="bear-body"></div>
+              <div class="bear-arms"></div>
+              <div class="bear-leg leg1"></div>
+              <div class="bear-leg leg2"></div>
+            </div>
+
+            <div class="laptop">
+              <div class="logo"><div class="bite"></div></div>
+            </div>
+
+            <div class="tee">
+              <div class="cup">
+                <div class="heart h1"></div>
+                <div class="heart h2"></div>
+                <div class="heart h3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= GRADUATING GIRL ================= -->
+    <div class="layer graduating">
+      <div class="canvas">
+        <div class="background"></div>
+
+        <div class="girl">
+          <div class="hat"></div>
+          <div class="hat_base"></div>
+
+          <div class="head">
+            <div class="face">
+              <div class="eyebrows">
+                <div class="eyebrow eb1"></div>
+                <div class="eyebrow eb2"></div>
+              </div>
+
+              <div class="eyes">
+                <div class="eye e1">
+                  <div class="iris"><div class="light l1"></div></div>
+                </div>
+                <div class="eye e2">
+                  <div class="iris"><div class="light l2"></div></div>
+                </div>
+              </div>
+
+              <div class="blushes">
+                <div class="blush b1"></div>
+                <div class="nose"></div>
+                <div class="blush b2"></div>
+              </div>
+
+              <div class="mouth"></div>
+            </div>
+          </div>
+
+          <div class="neck"></div>
+
+          <div class="hair">
+            <div class="hair-front">
+              <div class="front f1"></div>
+              <div class="front f2"></div>
+            </div>
+            <div class="hair-back"></div>
+          </div>
+
+          <div class="body">
+            <div class="shirt">
+              <div class="shirt-neck s1"></div>
+              <div class="shirt-neck s2"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table">
+          <div class="on-table">
+            <div class="diploma">
+              <p class="text">DIPLOMA</p>
+            </div>
+
+            <div class="tee">
+              <div class="cup">
+                <p class="text2">Coffee</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+  const scene = document.getElementById("scene");
+
+  const SHOW_GRADUATED_AFTER = 1800;
+  const HOLD_TIME = 4000;            // how long each state stays visible
+
+  function loopAnimation() {
+    // go to graduating
+    setTimeout(() => {
+      scene.classList.add("is-graduated");
+    }, SHOW_GRADUATED_AFTER);
+
+    // go back to small girl
+    setTimeout(() => {
+      scene.classList.remove("is-graduated");
+    }, SHOW_GRADUATED_AFTER + HOLD_TIME);
+  }
+
+  // first run
+  loopAnimation();
+
+  // repeat forever
+  setInterval(loopAnimation, SHOW_GRADUATED_AFTER * 2 + HOLD_TIME);
+</script>
+
+
+</body>
+</html>
