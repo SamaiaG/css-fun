@@ -30,6 +30,7 @@ body {
   opacity: 0.5;
   z-index: -4;
   position: relative; 
+  top: 10vmin;
 }
 .girl {
   display: flex;
@@ -409,22 +410,39 @@ body {
   width: 26vmin;
   height: 14vmin;
   border-radius: 50%;
-  background-color: #f1ed8f;
+  background-color: #fffdcf;
   position: relative;
   left: -34vmin;
   top: -50vmin;
   font-size: 2vmin;
-  font-weight: 600;
-  color: #333333;
-  opacity: 0; 
   pointer-events: none; 
   display: flex;
   align-items: center;
   justify-content: center;
-   transition: opacity 0.4s ease, transform 0.4s ease;
+   transition:
+    opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
   transform: scale(0.95);
+  padding: 1vmin;
+  opacity: 0;
 }
-
+.text{
+  font-family: 'Quicksand', sans-serif;
+  color: #333333;
+  text-align: center;
+}
+.bubble::after{
+  content: '';
+  display: block;
+  width: 8vmin;
+  height: 18vmin;
+  background-color: #fffdcf;
+  position: absolute;
+ clip-path: polygon(0 73%, 0% 100%, 100% 100%);
+  top: -21%;
+  left: 74%;
+  transform: rotate(19deg);
+}
 
 
 @keyframes cheeks {
