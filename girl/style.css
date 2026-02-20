@@ -211,7 +211,7 @@ body {
   height: 5vmin;
   background-color: #c6b09c;
   position: relative;
-  top: 12vmin;
+  top: 18vmin;
 }
 
 .on-table {
@@ -404,15 +404,29 @@ body {
   transform: rotate(112deg);
 }
 
-@keyframes hi {
-  0%,
-  100% {
-    top: 45%;
-  }
-  50% {
-    top: 35%;
-  }
+
+.bubble {
+  width: 26vmin;
+  height: 14vmin;
+  border-radius: 50%;
+  background-color: #f1ed8f;
+  position: relative;
+  left: -34vmin;
+  top: -50vmin;
+  font-size: 2vmin;
+  font-weight: 600;
+  color: #333333;
+  opacity: 0; 
+  pointer-events: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: scale(0.95);
 }
+
+
+
 @keyframes cheeks {
   0%,
   100% {
@@ -440,3 +454,7 @@ body {
   animation: smile 3s forwards;
 }
 
+.girl:hover ~ .bubble {
+  opacity: 1;
+  transform: scale(1);
+}
